@@ -9,6 +9,7 @@ const Header = () => {
         <img src={logoImg} alt="" />
         <button
           type="button"
+          // onClick={}
           className="border border-violet-500 font-semibold rounded-lg px-6 py-4 flex gap-3 items-center hover:border-violet-300"
         >
           <Plus size={20} className="text-violet-500" />
