@@ -15,11 +15,19 @@ const SummaryTable = () => {
       </div>
       <div className="grid grid-rows-7 grid-flow-col gap-2">
         {summaryDates.map((date) => {
-          return <HabitDaily key={date.toString()} />;
+          return (<HabitDaily 
+            key={date.toString()} 
+            amount={20} 
+            completed={Math.round(Math.random()*20)} />);
         })}
         {amountOfDaysToFill > 0 &&
           Array.from({ length: amountOfDaysToFill }).map((day, index) => {
-            return <div key={index} className="w-10 h-10 bg-zinc-900 border-2 border-zinc-800 rounded opacity-40 cursor-not-allowed"></div>;
+            return (
+              <div
+                key={index}
+                className="w-10 h-10 bg-zinc-900 border-2 border-zinc-800 rounded opacity-40 cursor-not-allowed"
+              ></div>
+            );
           })}
       </div>
     </div>
